@@ -1,5 +1,4 @@
 /* work sans font */
-<>
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Work+Sans:wght@400;500;600;700;800&display=swap');
   *{
     font-family: 'Open Sans', sans-serif;
@@ -27,7 +26,7 @@ border: 0;
     justify-content: space-between;
     align-items: center;
   }
-  .nav-tittle{
+  .tittle{
     font-size: 2.8rem;
     font-weight: 700;
     color: #131313;
@@ -87,6 +86,36 @@ main{
   align-items: center;
   text-align: center;
 }
+/* fact card */
+.card-container{
+  display: flex;
+  justify-content: space-around;
+}
+.card-container .card{
+  border-radius: 8px;
+border: 1px solid #FF900E;
+align-items: center;
+text-align: center;
+padding: 15px;
+}
+.card-container .card-name{
+  font-size: 2.8rem;
+  color: #424242;
+
+}
+/* sponsors */
+.sponsors{
+  text-align: center;
+}
+.sponsors-image-container{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sponsors-image-container img{
+  width: 165px;
+}
 
 
 
@@ -94,10 +123,13 @@ main{
 
   /* ------resopnsive media queries((mobile) -----*/
   @media screen and (max-width:576px) {
-    header,.features-details{
+    header,.features-details,.card-container{
       padding: 20px;
     }
-    nav, .features{
+    .card-container,.sponsors-image-container{
+      gap: 20px;
+    }
+    nav, .features, .card-container,.sponsors-image-container{
       flex-direction: column;
     }
     .features-image{
@@ -107,11 +139,14 @@ main{
   }
   /* ------responsive media queries (tablet) */
   @media screen and (min-width:576px) and (max-width:960px){
-    nav, .features{
+    nav, .features, .card-container, .sponsors-image-container{
       flex-direction: column;
     }
-    header,.features-details {
+    header,.features-details,.card-container {
       padding: 50px; 
+  }
+  .card-container,.sponsors-image-container{
+    gap: 20px;
   }
   .features-image{ grid-template-columns:1fr;
   }
