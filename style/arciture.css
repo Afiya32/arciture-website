@@ -5,6 +5,17 @@
     font-family: 'Open Sans', sans-serif;
 font-family: 'Work Sans', sans-serif;
   }
+  /* shared style */
+  .btn-primary{
+    border-radius: 8px;
+background: #FF900E;
+padding: 20px 25px;
+color: #fff;
+font-size: 1.25rem;
+cursor: pointer;
+border: 0;
+
+  }
   /*-----header part------  */
   header{
     background: rgba(255, 144, 14, 0.10);
@@ -45,6 +56,59 @@ font-family: 'Work Sans', sans-serif;
     font-weight: 700;
     color: #131313;
   }
-  .banner-describe{
+  .describe{
      color: #727272;
+  }
+  .banner img{
+    margin-top: 20px;
+    width: 100%;
+  }
+/* main part features */
+main{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.features{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.features-image{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  border-radius: 10px;
+}
+.features-details{
+  padding: 0 70px;
+  margin-top: 120px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+
+  /* ------resopnsive media queries((mobile) -----*/
+  @media screen and (max-width:576px) {
+    header{
+      padding: 20px;
+    }
+    nav{
+      flex-direction: column;
+    }
+    
+  }
+  /* ------responsive media queries (tablet) */
+  @media screen and (min-width:576px) and (max-width:960px){
+    nav{
+      flex-direction: column;
+    }
+    header{
+      padding: 50px;
+
+    
   }
